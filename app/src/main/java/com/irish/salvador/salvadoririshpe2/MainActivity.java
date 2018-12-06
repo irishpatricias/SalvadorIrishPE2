@@ -64,11 +64,9 @@ public class MainActivity extends AppCompatActivity {
         String text3 = egend.getText().toString();
         String text = (text1 + "\n" + text2 + "\n" + text3);
         FileOutputStream fos = null;
-
         try {
             fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
             fos.write(text.getBytes());
-            text.getText().clear();
             Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,
                     Toast.LENGTH_LONG).show();
         } catch (FileNotFoundException e) {
