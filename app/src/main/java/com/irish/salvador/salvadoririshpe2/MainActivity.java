@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         eresu = findViewById(R.id.resu);
     }
     public void iSearch(View v){
+        eresu.setVisibility(View.VISIBLE);
         FileInputStream fis = null;
 
         try {
